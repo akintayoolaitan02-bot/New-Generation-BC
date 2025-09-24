@@ -95,6 +95,7 @@ body {
 
   .contact-info {
     padding-left: 0; /* remove extra padding on mobile */
+    display: none;
   }
 
   .top-right {
@@ -376,3 +377,4 @@ body {
     order: 2;
   }
 }
+
