@@ -443,7 +443,7 @@ body {
 
 .hero-content h2 {
   font-size: 1.8rem;
-  color: antiquewhite;
+  color: white;
   margin-bottom: 0.7rem;
   min-height: 2.5rem;
   letter-spacing: 1px;
@@ -548,8 +548,8 @@ nav.scrolled {
     text-align: center;
   }
   .hero-content h2 {
-  font-size: 1.3rem;
-  color: antiquewhite;
+  font-size: 1rem;
+  color: white;
   margin-bottom: 0.7rem;
   min-height: 2.5rem;
   letter-spacing: 1px;
