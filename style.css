@@ -95,7 +95,7 @@ body {
 
   .contact-info {
     padding-left: 0; /* remove extra padding on mobile */
-    display: none;
+    display: none; /*remove on mobile*/
   }
 
   .top-right {
@@ -117,10 +117,11 @@ body {
   background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(6px);
   padding: 5px 0;
-  position: sticky;
-  top: 0;
+  position: relative; /* ✅ starts as normal */
   width: 100%;
-  z-index: 1000;
+  z-index: 999;
+  transition: all 0.4s ease, opacity 0.4s ease;
+  opacity: 1;
 }
 
 .navbar .container {
@@ -130,6 +131,31 @@ body {
   justify-content: flex-start; /* align left */
   align-items: center;
   gap: 50px; /* space between logo and links */
+}
+
+/* ✅ Fixed Navbar (when top bar scrolls away) */
+.navbar.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  animation: fadeInSlide 0.5s forwards ease-in-out;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0); /* ✨ added subtle shadow add if needed*/
+  
+}
+
+
+/* ✅ Fade-in + Slide-up animation */
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Logo */
@@ -283,6 +309,12 @@ body {
     border-radius: 0;
   }
 
+  .dropdown-menu.open {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
   .dropdown-menu li a {
     padding: 8px 0;
   }
@@ -378,3 +410,148 @@ body {
   }
 }
 
+/* === HERO SECTION === */
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: fadeSlideshow 16s infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 850px;
+  padding: 0 1rem;
+}
+
+.hero-content h2 {
+  font-size: 1.8rem;
+  color: antiquewhite;
+  margin-bottom: 0.7rem;
+  min-height: 2.5rem;
+  letter-spacing: 1px;
+}
+
+.static-text {
+  color: antiquewhite;
+  font-weight: bold;
+}
+
+.typing-text {
+  border-right: 2px solid antiquewhite;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+
+.hero-content p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.hero-buttons .btn {
+  padding: 0.9rem 2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.primary-btn {
+  background: #00bcd4;
+  color: #fff;
+}
+
+.primary-btn:hover {
+  background: #0097a7;
+}
+
+.secondary-btn {
+  background: transparent;
+  border: 2px solid #00bcd4;
+  color: #00bcd4;
+}
+
+.secondary-btn:hover {
+  background: #00bcd4;
+  color: #fff;
+}
+
+/* === Background Slideshow Animation === */
+@keyframes fadeSlideshow {
+  0%   { background-image: url('images/hero1.jpg'); }
+  25%  { background-image: url('images/hero2.jpg'); }
+  50%  { background-image: url('images/hero3.jpg'); }
+  75%  { background-image: url('images/hero4.jpg'); }
+  100% { background-image: url('images/hero1.jpg'); }
+}
+
+/* === Transparent navbar on hero === */
+.navbar {
+  background: transparent;
+  transition: background 0.3s ease;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav.scrolled {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-buttons .btn {
+    width: 50%;
+    text-align: center;
+  }
+  .hero-content h2 {
+  font-size: 1.3rem;
+  color: antiquewhite;
+  margin-bottom: 0.7rem;
+  min-height: 2.5rem;
+  letter-spacing: 1px;
+}
+}
