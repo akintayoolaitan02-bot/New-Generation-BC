@@ -661,6 +661,9 @@ nav.scrolled {
     text-align: center;
   }
 
+  .intro-text{
+    font-size: 11px;
+  }
   .worship-text{
     text-align: center;
   }
