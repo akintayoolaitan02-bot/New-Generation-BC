@@ -157,3 +157,14 @@ window.addEventListener("scroll", function () {
   }, { threshold: 0.2 });
 
   faders.forEach(fade => observer.observe(fade));
+
+  // Fade-in scroll animation for upcoming-section
+  window.addEventListener('scroll', () => {
+  document.querySelectorAll('.fade-in-scroll').forEach(section => {
+    const sectionTop = section.getBoundingClientRect().top;
+    const trigger = window.innerHeight * 0.85;
+    if (sectionTop < trigger) {
+      section.classList.add('show');
+    }
+  });
+});

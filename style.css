@@ -609,6 +609,7 @@ nav.scrolled {
 }
 
 .worship-description {
+  font-family: Varela Round;
   font-size: 15px;
   line-height: 1.5;
   color: #444;
@@ -640,6 +641,10 @@ nav.scrolled {
   color: #fff;
   border-color: transparent;
   transform: translateY(-1px);
+}
+
+.learn-more-btn:active{
+  transform: scale(0.96);
 }
 
 /* Fade-in Animation */
@@ -682,4 +687,123 @@ nav.scrolled {
   }
 }
 
+/* === Upcoming Section === */
+.upcoming-section {
+  background: #f5f5f5; /* Light gray background */
+  padding: 100px 17%;
+}
 
+.upcoming-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.upcoming-text {
+  flex: 1 1 5%;
+}
+
+.upcoming-title-container{
+  border-left: 3px solid #333;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.upcoming-title {
+  font-size: 30px;
+  font-weight: 800;
+  color: #333;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  line-height: 1;
+}
+
+
+.upcoming-desc {
+  font-family: Varela Round;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.upcoming-btn {
+  display: inline-block;
+  background: #0077b6;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 0;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+}
+
+.upcoming-btn:hover {
+  background: #005f8a;
+  transform: translateY(-2px);
+}
+
+.upcoming-btn:active{
+  transform: scale(0.97);
+}
+
+.upcoming-image {
+  flex: 1 1 50%;
+  text-align: center;
+}
+
+.upcoming-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .upcoming-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
+  }
+
+  .upcoming-section{
+    padding: 50px;
+  }
+
+  .upcoming-title-container{
+    border: none;
+  }
+
+  .upcoming-title{
+    margin: 0;
+  }
+
+  .upcoming-text {
+    flex: 1 1 100%;
+  }
+
+  .upcoming-subtitle {
+    font-size: 2.5rem;
+  }
+
+  .upcoming-image {
+    margin-top: 40px;
+  }
+}
+
+/* === Fade-in on scroll === */
+.fade-in-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.fade-in-scroll.show {
+  opacity: 1;
+  transform: translateY(0);
+}
