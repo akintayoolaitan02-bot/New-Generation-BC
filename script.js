@@ -168,3 +168,13 @@ window.addEventListener("scroll", function () {
     }
   });
 });
+
+// Fade-in on scroll for ministries section
+window.addEventListener("scroll", () => {
+  document.querySelectorAll(".fade-in-on-scroll").forEach((el) => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      el.classList.add("visible");
+    }
+  });
+});

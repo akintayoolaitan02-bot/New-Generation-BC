@@ -706,7 +706,7 @@ nav.scrolled {
 }
 
 .upcoming-title-container{
-  border-left: 3px solid #333;
+  border-left: 2.5px solid #333;
   padding-left: 10px;
   padding-bottom: 10px;
   padding-top: 10px;
@@ -772,7 +772,7 @@ nav.scrolled {
   }
 
   .upcoming-section{
-    padding: 50px;
+    padding: 70px;
   }
 
   .upcoming-title-container{
@@ -804,6 +804,133 @@ nav.scrolled {
 }
 
 .fade-in-scroll.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Ministries Section */
+.ministries-section {
+  background: #e0f2f7; /* Light blue */
+  padding: 100px 10%;
+}
+
+.ministries-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+  align-items: center;
+}
+
+
+.ministries-content h2 {
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 5px;
+  border-left: 2px solid #333;
+ padding: 10px;
+}
+
+.ministries-content p {
+  font-family: varela round;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  max-width: 500px;
+}
+
+.ministries-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: none;
+  color: #005f8f;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border: 1px solid #005f8f;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.ministries-btn:hover {
+  background: #005f8f;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* Cards */
+.ministries-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.ministry-card {
+  background: transparent;
+  border-radius: 0px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.ministry-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: #fff;
+}
+
+.ministry-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.ministry-card h3 {
+  font-size: 1rem;
+  font-weight: 800;
+  margin: 20px;
+}
+
+.ministry-card p {
+  font-family: varela round;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 20px 20px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .ministries-section{
+    padding: 50px;
+  }
+
+  .ministries-cards h3{
+    font-size: 0.9;
+  }
+  .ministries-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .ministries-content{
+    text-align: left;
+  }
+
+  .ministries-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .ministries-content p {
+    margin: 0 auto 30px;
+  }
+}
+
+/* Fade-in Animation */
+.fade-in-on-scroll {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in-on-scroll.visible {
   opacity: 1;
   transform: translateY(0);
 }
