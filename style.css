@@ -900,7 +900,7 @@ nav.scrolled {
 }
 
 /* Responsive */
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .ministries-section{
     padding: 50px;
   }
@@ -1070,7 +1070,7 @@ nav.scrolled {
 }
 
 /* Responsive */
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .conference-container {
     flex-direction: column;
     height: auto;
@@ -1116,16 +1116,5 @@ nav.scrolled {
   }
 }
 
-@media (max-width: 600px) {
-  .conference-img {
-    max-width: 90%;              /* Even more compact on small phones */
-  }
 
-  .conference-left h2 {
-    font-size: 2rem;             /* Prevents giant heading */
-  }
 
-  .conference-left p {
-    font-size: 1rem;
-  }
-}
