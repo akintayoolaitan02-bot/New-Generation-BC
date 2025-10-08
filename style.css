@@ -1115,10 +1115,10 @@ nav.scrolled {
   }
 
   .conference-right h3 {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   .conference-right p {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }
 
@@ -1135,3 +1135,4 @@ nav.scrolled {
     font-size: 0.8rem;
   }
 }
+
