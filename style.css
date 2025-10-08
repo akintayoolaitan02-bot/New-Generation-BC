@@ -828,7 +828,7 @@ nav.scrolled {
   font-weight: 800;
   margin-bottom: 5px;
   border-left: 2px solid #333;
- padding: 10px;
+  padding: 10px;
 }
 
 .ministries-content p {
@@ -868,13 +868,15 @@ nav.scrolled {
   background: transparent;
   border-radius: 0px;
   overflow: hidden;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
+  opacity: 0.95;
 }
 
 .ministry-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   background: #fff;
+  opacity: 1;
 }
 
 .ministry-card img {
@@ -884,7 +886,7 @@ nav.scrolled {
 }
 
 .ministry-card h3 {
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 800;
   margin: 20px;
 }
@@ -894,6 +896,7 @@ nav.scrolled {
   font-size: 1rem;
   line-height: 1.5;
   margin: 0 20px 20px;
+  text-align: justify;
 }
 
 /* Responsive */
@@ -933,4 +936,196 @@ nav.scrolled {
 .fade-in-on-scroll.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Conference Section */
+.conference-section {
+  background: url('images/operation-push-background.jpg') no-repeat center center/cover;
+  padding: 100px 0;
+  position: relative;
+}
+
+
+/* Main container */
+.conference-container {
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+  height: 650px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0);
+}
+
+/* Left side (transparent gray) */
+.conference-left {
+  flex: 1;
+  background: rgba(128, 128, 128, 0.5);
+  color: #fff;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  text-align: left;
+}
+
+.conference-title {
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 0px;
+  text-transform: none;
+}
+
+.conference-title .line0 {
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #000;
+  font-family: varela round;
+  margin-bottom: 10px;
+}
+
+.conference-title .line1 {
+  display: block;
+  font-size: 35px;
+  font-style: italic;
+}
+
+.conference-title .line2 {
+  display: block;
+  letter-spacing: 5px;
+}
+
+.conference-desc {
+  font-size: 1rem;
+  font-family: varela round;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.conference-btn {
+  display: inline-block;
+  max-width: 90px;
+  padding: 12px 28px;
+  background: #00bcd4;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 0;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.conference-btn:hover {
+  background: #0097a7;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Right side (solid gray) */
+.conference-right {
+  flex: 1;
+  background: #777;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 40px;
+  text-align: left;
+  overflow: hidden;
+  align-items: start;
+}
+
+.conference-img {
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  object-fit: contain;
+}
+
+.conference-info h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #000;
+  font-size: 500;
+  font-family: varela round;
+}
+
+.conference-info p {
+  font-size: 1rem;
+  margin: 5px 0;
+  font-size: 400;
+  font-family: varela round;
+}
+
+/*delete after confirmation of program*/
+.coming {
+  font-size: 0.5rem;
+  font-style: italic;
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0;
+  text-decoration: underline;
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .conference-container {
+    flex-direction: column;
+    height: auto;
+    width: 90%;
+  }
+
+ .conference-left {
+    width: 90%;
+    height: auto;
+    padding: 30px 20px;
+    justify-content: left;
+    text-align: left;
+  }
+
+  .conference-right {
+    width: 90%;
+    height: auto;
+    padding: 30px 20px;
+  }
+
+  .conference-left h2,
+  .conference-left p {
+    text-align: left;
+  }
+
+  .conference-img {
+    max-width: 70%;
+    margin: 20px auto;
+  }
+
+
+  .conference-title {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .conference-desc {
+    text-align: center;
+  }
+
+  .conference-right {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .conference-img {
+    max-width: 90%;              /* Even more compact on small phones */
+  }
+
+  .conference-left h2 {
+    font-size: 2rem;             /* Prevents giant heading */
+  }
+
+  .conference-left p {
+    font-size: 1rem;
+  }
 }
