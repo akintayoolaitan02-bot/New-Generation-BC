@@ -179,5 +179,23 @@ window.addEventListener("scroll", () => {
   });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          observer.unobserve(entry.target); // only animate once
+        }
+      });
+    },
+    { threshold: 0.2 } // triggers when 20% of the section is visible
+  );
+
+  document.querySelectorAll(".pastor-section").forEach(section => {
+    observer.observe(section);
+  });
+});
+
 
 

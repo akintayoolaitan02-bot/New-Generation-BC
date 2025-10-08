@@ -1099,6 +1099,10 @@ nav.scrolled {
     text-align: left;
   }
 
+  .conference-left p {
+    font-size: 1rem;
+  }
+
   .conference-img {
     max-width: 100%;
     margin: 20px auto;
@@ -1133,5 +1137,104 @@ nav.scrolled {
 
   .conference-left p {
     font-size: 0.8rem;
+  }
+}
+
+/* === Meet the Pastor Section === */
+.pastor-section {
+  background-color: #1e1e1e;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 10%;
+  gap: 50px;
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.pastor-content {
+  flex: 1;
+}
+
+.pastor-logo {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+.pastor-title {
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+.pastor-intro {
+  font-size: 1.1rem;
+  font-family: varela round;
+  line-height: 1.8;
+  color: #cccccc;
+  max-width: 500px;
+}
+
+.pastor-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.pastor-image {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 1px;
+  filter: grayscale(100%);
+  transition: all 0.6s ease;
+}
+
+.pastor-image:hover {
+  filter: grayscale(0%);
+  transform: translateY(-5px);
+}
+
+
+/* Initial state - hidden until scrolled into view */
+.hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+/* Reveal when in view */
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .pastor-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 5%;
+  }
+
+  .pastor-logo {
+    display: none;
+  }
+
+  .pastor-title {
+    font-size: 1.2rem;
+  }
+
+  .pastor-intro {
+    font-size: 1rem;
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .pastor-image {
+    max-width: 300px;
+    margin-top: 30px;
   }
 }
