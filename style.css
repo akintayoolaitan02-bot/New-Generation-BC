@@ -6,6 +6,9 @@ body {
   color: #333;
 }
 
+html{
+  scroll-behavior: smooth;
+}
 
 /* Top Bar */
 .top-bar {
@@ -632,7 +635,7 @@ nav.scrolled {
   color: #00bcd4;
   font-weight: 400;
   text-decoration: none;
-  border-radius: 0px;
+  border-radius: 30px;
   transition: all 0.4s ease;
 }
 
@@ -735,7 +738,7 @@ nav.scrolled {
   background: #0077b6;
   color: #fff;
   padding: 12px 30px;
-  border-radius: 0;
+  border-radius: 30px;
   text-decoration: none;
   font-weight: 500;
   letter-spacing: 2px;
@@ -845,6 +848,7 @@ nav.scrolled {
   background: none;
   color: #005f8f;
   font-weight: 500;
+  border-radius: 30px;
   letter-spacing: 1px;
   border: 1px solid #005f8f;
   text-decoration: none;
@@ -1010,7 +1014,7 @@ nav.scrolled {
   background: #00bcd4;
   color: #fff;
   font-weight: 500;
-  border-radius: 0;
+  border-radius: 30px;
   text-decoration: none;
   transition: all 0.3s ease;
   text-align: center;
