@@ -1367,7 +1367,7 @@ nav.scrolled {
 /* Gallery Section */
 .gallery-section {
   background: #f9f9f9;
-  padding: 35px 0;
+  padding: 60px 0;
   text-align: center;
   overflow: hidden;
   position: relative;
@@ -1379,37 +1379,56 @@ nav.scrolled {
   font-family: varela round;
   color: #333;
   margin-bottom: 30px;
-  margin-top: 0;
   letter-spacing: 1px;
   display: none;
 }
 
-/* Slider setup */
+/* Slider */
 .gallery-slider {
   width: 100%;
   overflow: hidden;
   position: relative;
 }
 
+/* Gradient fade edges */
+.gallery-fade {
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.gallery-fade-left {
+  left: 0;
+  background: linear-gradient(to right, #f9f9f9 70%, transparent);
+}
+
+.gallery-fade-right {
+  right: 0;
+  background: linear-gradient(to left, #f9f9f9 70%, transparent);
+}
+
 .gallery-track {
   display: flex;
-  width: calc(200px * 12);
+  width: calc(100px * 12);
   animation: scrollGallery 60s linear infinite;
 }
 
 .gallery-track img {
-  width: 250px;
-  height: 180px;
+  width: 300px;
+  height: 200px;
   object-fit: cover;
   border-radius: 10px;
-  margin: 0 20px;
+  margin: 0 15px;
   transition: all 0.4s ease;
 }
 
 /* Hover effect */
 .gallery-track img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 15px rgba(0, 188, 212, 0.5);
+  transform: scale(1.10);
+  box-shadow: 0 4px 15px rgba(0, 188, 212, 0.4);
   border-radius: 0;
 }
 
@@ -1430,9 +1449,9 @@ nav.scrolled {
 
 /* Responsive */
 @media (max-width: 768px) {
-  .gallery-track img {
-    width: 170px;
-    height: 120px;
+   .gallery-track img {
+    width: 180px;
+    height: 130px;
   }
 
   .gallery-track img:hover{
@@ -1440,7 +1459,11 @@ nav.scrolled {
   }
 
   .gallery-title {
-    font-size: 20px;
+    font-size: 26px;
+  }
+
+  .gallery-fade {
+    width: 50px;
   }
 }
 
