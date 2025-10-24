@@ -1364,6 +1364,88 @@ nav.scrolled {
   }
 }
 
+/* Gallery Section */
+.gallery-section {
+  background: #f9f9f9;
+  padding: 35px 0;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery-title {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: varela round;
+  color: #333;
+  margin-bottom: 30px;
+  margin-top: 0;
+  letter-spacing: 1px;
+  display: none;
+}
+
+/* Slider setup */
+.gallery-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery-track {
+  display: flex;
+  width: calc(200px * 12);
+  animation: scrollGallery 60s linear infinite;
+}
+
+.gallery-track img {
+  width: 250px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 0 20px;
+  transition: all 0.4s ease;
+}
+
+/* Hover effect */
+.gallery-track img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 188, 212, 0.5);
+  border-radius: 0;
+}
+
+/* Animation */
+@keyframes scrollGallery {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause on hover */
+.gallery-slider:hover .gallery-track {
+  animation-play-state: paused;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .gallery-track img {
+    width: 170px;
+    height: 120px;
+  }
+
+  .gallery-track img:hover{
+    transform: scale(1.15);
+  }
+
+  .gallery-title {
+    font-size: 20px;
+  }
+}
+
+
+
 /*footer*/
 .footer-section {
   background-color: #222;
