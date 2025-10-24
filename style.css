@@ -1413,7 +1413,7 @@ nav.scrolled {
 .gallery-track {
   display: flex;
   width: calc(100px * 12);
-  animation: scrollGallery 50s linear infinite;
+  animation: scrollGallery 40s linear infinite;
 }
 
 .gallery-track img {
@@ -1643,5 +1643,6 @@ nav.scrolled {
     font-size: 0.6rem;
   }
 }
+
 
 
