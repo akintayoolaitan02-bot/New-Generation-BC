@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | New Generation Baptist Church</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <nav class="about-navbar">
+    <div class="about-container">
+        <!-- Logo (Image + Link) -->
+        <a href="index.html" class="logo">
+        <img src="images/Logo.png" alt="Church Logo">
+        </a>
+
+        <!-- Nav Links -->
+        <ul class="about-nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" id="active-page">About</a></li>
+        <li><a href="#">Our Programmes</a></li>
+        <li><a href="#">Upcoming Events</a></li>
+
+        <!-- Gallery Dropdown -->
+        <li class="dropdown">
+            <a href="#">
+            Gallery <span class="arrow">▾</span>
+            </a>
+            <ul class="dropdown-menu">
+            <li><a href="#">Watch Latest Sermon</a></li>
+            <li><a href="#">View Gallery</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Give</a></li>
+        </ul>
+
+        <!-- Hamburger Icon -->
+        <div id="hamburger" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+        </div>
+    </div>
+    </nav>
+    
+    <!-- About Page Hero Section -->
+    <section class="about-hero">
+    <div class="about-hero-overlay"></div>
+    <div class="about-hero-content">
+        <h1>WELCOME TO <BR> NEW GENERATION BAPTIST CHURCH</h1>
+        <p>
+        A place where hearts are renewed, faith is strengthened, and lives are
+        transformed through the power of God’s Word and genuine fellowship.
+        </p>
+    </div>
+    </section>
+
+    <!-- About Story Section -->
+    <section class="about-story fade-in">
+    <div class="about-story-container">
+        <div class="about-story-left">
+        <h1>About<br> New Generation Baptist Church</h1>
+        </div>
+
+        <div class="about-story-right">
+        <h3>Welcome to New Generation Baptist Church</h3>
+        <p>
+            New Generation Baptist Church is a Christ-centered community dedicated
+            to sharing the love of God and nurturing spiritual growth in every
+            believer. Since our beginning, we have sought to be a light in our
+            community—encouraging faith, hope, and unity through worship,
+            discipleship, and outreach.
+        </p>
+        <p>
+            We believe church is more than a building; it’s a family. Together, we
+            learn, serve, and grow in grace, equipping one another to live out the
+            gospel in everyday life.
+        </p>
+        </div>
+    </div>
+    </section>
+
+
+    
+    
+
+    <section style="margin-bottom: 2000px; "></section>
+
+ <script src="script.js"></script>   
+ <script>
+  const fadeElems = document.querySelectorAll('.fade-in');
+
+  function revealOnScroll() {
+    fadeElems.forEach(elem => {
+      const rect = elem.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        elem.classList.add('visible');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', revealOnScroll);
+  window.addEventListener('load', revealOnScroll);
+</script>
+
+</body>
+</html>

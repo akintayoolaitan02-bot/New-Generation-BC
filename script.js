@@ -1,10 +1,11 @@
 const hamburger = document.getElementById("hamburger");
-const navLinks = document.querySelector(".nav-links");
+const navLinks = document.querySelector(".nav-links, .about-nav-links");
 
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
   navLinks.classList.toggle("active");
 });
+
 
 // Live dropdown toggle + close behaviour
 (function () {
@@ -80,7 +81,7 @@ galleryDropdown.addEventListener('click', (e) => {
 });
 
 window.addEventListener("scroll", function () {
-  const navbar = document.querySelector(".navbar");
+  const navbar = document.querySelector(".navbar, .about-navbar");
   if (window.scrollY > 50) {
     navbar.classList.add("fixed");
   } else {
@@ -134,16 +135,29 @@ function showSlide() {
 showSlide();
 setInterval(showSlide, 4000); // change every 4s
 
-// 📌 Navbar background toggle
+// 📌 Navbar background toggle (works even if no hero section exists)
 window.addEventListener("scroll", function () {
   const nav = document.querySelector("nav");
   const hero = document.querySelector(".hero");
-  if (window.scrollY > hero.offsetHeight - 100) {
-    nav.classList.add("scrolled");
+  const scrollY = window.scrollY;
+
+  if (hero) {
+    // On pages with a hero (e.g. homepage)
+    if (scrollY > hero.offsetHeight - 100) {
+      nav.classList.add("scrolled");
+    } else {
+      nav.classList.remove("scrolled");
+    }
   } else {
-    nav.classList.remove("scrolled");
+    // On pages without hero (e.g. About, Contact)
+    if (scrollY > 50) {
+      nav.classList.add("scrolled");
+    } else {
+      nav.classList.remove("scrolled");
+    }
   }
 });
+
 
   // Fade-in scroll animation for worhsip-section
   const faders = document.querySelectorAll('.fade-in');
