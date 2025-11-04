@@ -1813,7 +1813,7 @@ nav.scrolled {
   height: 50%;
   border-bottom: solid 3px white;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
-  margin-bottom: 8px;
+  margin-bottom: 1.5rem;
 }
 
 .about-story-container {
@@ -1899,3 +1899,88 @@ nav.scrolled {
   }
 }
 
+.mission-vision {
+  background-color: white;
+  padding: 50px 20px;
+}
+
+.mv-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.mv-image{
+  flex: 0.5;
+}
+
+.mv-image img {
+  width: 100%;
+  max-width: 250px;
+  object-fit: cover;
+}
+
+.mv-text {
+  flex: 1.5;
+  min-width: 280px;
+}
+
+.mv-block {
+  margin-bottom: 2rem;
+}
+
+.mv-block h3 {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #333;
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: varela round;
+}
+
+.mv-block h3 i {
+  color: #0077b6;
+  margin-left: 8px;
+  font-size: 1.5rem;
+}
+
+.mv-block p {
+  color: #555;
+  line-height: 1.7;
+  font-size: 1rem;
+  font-family: varela round;
+}
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .mv-wrapper {
+    flex-direction: column;
+    text-align: left;
+    gap: 0;
+  }
+
+  .mv-image img {
+    max-width: 100%;
+  }
+
+  .mv-text {
+    margin-top: 20px;
+  }
+}
