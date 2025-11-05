@@ -2075,3 +2075,143 @@ nav.scrolled {
     font-size: 0.9rem;
   }
 }
+
+.leadership {
+  padding: 60px 20px;
+  background: #1e1e1e;
+}
+
+.leader-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 0 auto 70px auto;
+  flex-wrap: wrap;
+}
+
+.leader-image img {
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  filter: grayscale(100%);
+  transition: all 1s ease;
+}
+
+.leader-image img:hover{
+  filter: grayscale(0);
+  transform: translateY(-2px);
+  transform: scale(1.1);
+}
+
+.leader-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.leader-text h2 {
+  font-size: 1.8rem;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.leader-text p {
+  line-height: 1.8;
+  color: white;
+  font-family: varela round;
+}
+
+.ministry-heads {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.head-card {
+  background: #f8f9fa;
+  padding: 0px;
+  text-align: center;
+  border-radius: 0px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.head-card:hover {
+  transform: translateY(-5px);
+   box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5);
+}
+
+.head-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  margin-bottom: 0px;
+}
+
+.head-card h4 {
+  color: #0077b6;
+  margin-bottom: 0px;
+  font-family: varela round;
+}
+
+.head-card p {
+  color: #555;
+  font-size: 0.95rem;
+  font-family: varela round;
+  margin-top: 5px;
+  font-style: italic;
+}
+
+.ministry-heads {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.ministry-heads.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .leader-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .leader-image img {
+    max-width: 92%;
+  }
+
+  .leader-text h2 {
+    font-size: 1.6rem;
+  }
+
+   .ministry-heads {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .head-card img {
+    height: 160px;
+  }
+}
+

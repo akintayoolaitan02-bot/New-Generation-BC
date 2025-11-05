@@ -141,6 +141,49 @@
         </div>
     </div>
     </section>
+    
+    <section class="leadership fade-in">
+            <div class="leader-wrapper">
+                <div class="leader-image">
+                <img src="images/Rev.jpg" alt="Rev G.T. Fabunmi">
+                </div>
+
+                <div class="leader-text">
+                <h2>Meet Rev G.T. Fabunmi</h2>
+                <p>
+                   Reverend Gabriel Taiwo Fabunmi leads New Generation Baptist Church with a heart for people and a passion for spiritual growth. His ministry centers on faith, compassion, and practical teaching that helps individuals live out their God-given purpose.
+                </p>
+                </div>
+            </div>
+
+            <div class="ministry-heads">
+                <div class="head-card">
+                    <img src="images/womencord.jpg" alt="Mrs. Grace Oladipo">
+                    <h4>Mrs. Fabunmi</h4>
+                    <p>Head of Women’s Ministry</p>
+                </div>
+
+                <div class="head-card">
+                    <img src="images/youthpresident.jpg" alt="Brother Samuel Adeyemi">
+                    <h4>Brother Samuel Kayode</h4>
+                    <p>Youth Coordinator</p>
+                </div>
+
+                <div class="head-card">
+                    <img src="images/musiccord.jpg" alt="Sister Ruth Onabanjo">
+                    <h4>Sister Boluewatife Ojo</h4>
+                    <p>Music Director</p>
+                </div>
+
+                <div class="head-card">
+                    <img src="images/outreach.jpg" alt="Deacon James Okoro">
+                    <h4>Pastor Silas Ojo</h4>
+                    <p>Outreach & Evangelism Lead</p>
+                </div>
+            </div>
+
+        </section>
+
 
 
 
@@ -148,7 +191,7 @@
     
     
 
-    <section style="margin-bottom: 2000px; "></section>
+    <section style="margin-bottom: 200px; "></section>
 
  <script src="script.js"></script>   
  <script>
@@ -165,6 +208,21 @@
 
   window.addEventListener('scroll', revealOnScroll);
   window.addEventListener('load', revealOnScroll);
+// for ministries head
+  const fadeElements = document.querySelectorAll('.fade-in, .ministry-heads');
+
+function handleScroll() {
+  fadeElements.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      el.classList.add('visible');
+    }
+  });
+}
+
+window.addEventListener('scroll', handleScroll);
+handleScroll();
+
 </script>
 
 </body>
