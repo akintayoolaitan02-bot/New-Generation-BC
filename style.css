@@ -1970,6 +1970,11 @@ nav.scrolled {
 
 /* Responsive design */
 @media (max-width: 768px) {
+  .mission-vision {
+  background-color: white;
+  padding: 20px 20px;
+  }
+
   .mv-wrapper {
     flex-direction: column;
     text-align: left;
@@ -1982,5 +1987,91 @@ nav.scrolled {
 
   .mv-text {
     margin-top: 20px;
+  }
+}
+
+.core-values {
+  background: url('images/corevalue.jpg') center/cover no-repeat;
+  position: relative;
+  padding: 100px 20px;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cv-overlay {
+  background: rgba(255, 255, 255, 0.90);
+  padding: 40px 40px;
+  border-radius: 0px;
+  max-width: 1100px;
+  width: 100%;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.cv-container h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  font-family: arial;
+  letter-spacing: 2px;
+  color: #111;
+  margin-bottom: 2rem;
+}
+
+.cv-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  text-align: left;
+}
+
+.cv-item h3 {
+  font-size: 0.9rem;
+  font-family: varela round;
+  letter-spacing: 2px;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.cv-item p {
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  font-family: varela round;
+}
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .core-values{
+    padding: 40px 10px;
+  }
+  .cv-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .cv-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .cv-container h2{
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+    font-size: 1.3rem;
+  }
+  .cv-item h3{
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
   }
 }
