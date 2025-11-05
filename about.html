@@ -155,7 +155,7 @@
                 </p>
                 </div>
             </div>
-
+            <hr style="margin-bottom: 50px; margin-top: 0;">
             <div class="ministry-heads">
                 <div class="head-card">
                     <img src="images/womencord.jpg" alt="Mrs. Grace Oladipo">
@@ -181,49 +181,121 @@
                     <p>Outreach & Evangelism Lead</p>
                 </div>
             </div>
-
         </section>
 
+        <section class="cta-section fade-in">
+        <div class="cta-container">
+            <div class="cta-text">
+                <h2>Join Us This Sunday</h2>
+                <p>
+                    At New Generation Baptist Church, every gathering is a time of joy, reflection, 
+                    and renewal. Whether you’re new in faith or seeking a deeper walk with God, 
+                    you’ll find a community that welcomes you with open arms. Come experience 
+                    heartfelt worship, inspired teaching, and genuine fellowship that strengthens 
+                    your spirit for the week ahead.
+                </p>
+                <a href="contact.html" class="cta-btn">Plan Your Visit</a>
+            </div>
+            <div class="cta-image">
+                <img src="images/cta-church.jpg" alt="Church worship image">
+            </div>
+        </div>
+        </section>
 
+         <footer class="footer-section fade-in-scroll">
+            <div class="footer-container">
+            <div class="footer-column about">
+                <img src="images/Logo.png" alt="Church Logo" class="footer-logo" />
+                <p>
+                New Generation Baptist Church is a place of worship, love, and transformation. 
+                We are committed to spreading the gospel and empowering believers to fulfill God’s purpose.
+                </p>
+            </div>
 
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Our Programmes</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Give</a></li>
+                </ul>
+            </div>
 
+            <div class="footer-column">
+                <h3>Get Involved</h3>
+                <ul>
+                <li><a href="#">Join a Department</a></li>
+                <li><a href="#">Volunteer</a></li>
+                <li><a href="#">Upcoming Events</a></li>
+                <li><a href="#">Donate</a></li>
+                </ul>
+            </div>
 
-    
-    
+            <div class="footer-column contact">
+                <h3>Contact</h3>
+                <p>1-5, Church Street, Off Oloye B/S, Ijoko Lemode, Ogun State.</p>
+                <p>Email: newgenerationbaptistchurch14@gmail.com</p>
+                <p>Phone: +234 800 000 0000</p>
+                <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            </div>
 
-    <section style="margin-bottom: 200px; "></section>
+            <div class="footer-bottom">
+            <p>© 2025 New Generation Baptist Church. All Rights Reserved.</p>
+            </div>
+        </footer>
 
- <script src="script.js"></script>   
- <script>
-  const fadeElems = document.querySelectorAll('.fade-in');
+    <script src="script.js"></script>   
+    <script>
+    const fadeElems = document.querySelectorAll('.fade-in');
 
-  function revealOnScroll() {
-    fadeElems.forEach(elem => {
-      const rect = elem.getBoundingClientRect();
-      if (rect.top < window.innerHeight - 100) {
-        elem.classList.add('visible');
-      }
-    });
-  }
-
-  window.addEventListener('scroll', revealOnScroll);
-  window.addEventListener('load', revealOnScroll);
-// for ministries head
-  const fadeElements = document.querySelectorAll('.fade-in, .ministry-heads');
-
-function handleScroll() {
-  fadeElements.forEach(el => {
-    const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight - 100) {
-      el.classList.add('visible');
+    function revealOnScroll() {
+        fadeElems.forEach(elem => {
+        const rect = elem.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+            elem.classList.add('visible');
+        }
+        });
     }
-  });
-}
 
-window.addEventListener('scroll', handleScroll);
-handleScroll();
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+    // for ministries head
+    const fadeElements = document.querySelectorAll('.fade-in, .ministry-heads');
 
-</script>
+    function handleScroll() {
+    fadeElements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+        el.classList.add('visible');
+        }
+    });
+    }
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+
+      // Fade-in scroll animation for footer
+    window.addEventListener('scroll', () => {
+    document.querySelectorAll('.fade-in-scroll').forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const trigger = window.innerHeight * 0.85;
+        if (sectionTop < trigger) {
+        section.classList.add('show');
+        }
+    });
+    });
+
+
+    </script>
 
 </body>
 </html>

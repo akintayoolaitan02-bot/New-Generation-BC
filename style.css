@@ -2087,7 +2087,7 @@ nav.scrolled {
   justify-content: center;
   gap: 3rem;
   max-width: 1000px;
-  margin: 0 auto 70px auto;
+  margin: 0 auto 50px auto;
   flex-wrap: wrap;
 }
 
@@ -2223,3 +2223,114 @@ nav.scrolled {
   }
 }
 
+.cta-section {
+  background-color: #fff;
+  padding: 80px 20px;
+  margin-top: 0;
+}
+
+.cta-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.cta-text {
+  flex: 1.5;
+  min-width: 300px;
+}
+
+.cta-text h2 {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  font-weight: 400;
+  color: #0077b6;
+  margin-bottom: 1rem;
+}
+
+.cta-text p {
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  font-family: varela round;
+}
+
+.cta-btn {
+  background-color: none;
+  color: #0077b6;
+  padding: 10px 28px;
+  border-radius: 25px;
+  border: solid 1px #0077b6;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-family: varela round;
+}
+
+.cta-btn:hover {
+  background-color: #0077b6;
+  color: white;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
+}
+.cta-btn:active{
+  transform: scale(0.95);
+}
+
+.cta-image {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.cta-image img {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 0px;
+  object-fit: cover;
+  border: solid 4px black;
+}
+
+/* Fade-in */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .cta-section {
+    background-color: #fff;
+    padding: 20px 20px;
+    margin-top: 0;
+  }
+
+  .cta-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cta-text h2 {
+    font-size: 1.3rem;
+  }
+  .cta-text p{
+    font-size: 0.9rem;
+  }
+  .cta-btn{
+    font-size: 0.9rem;
+  }
+  .cta-image img {
+    max-width: 100%;
+  }
+}
