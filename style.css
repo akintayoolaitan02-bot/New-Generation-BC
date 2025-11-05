@@ -2213,5 +2213,13 @@ nav.scrolled {
   .head-card img {
     height: 160px;
   }
+
+  .head-card h4{
+    font-size: 0.7rem;
+  }
+
+  .head-card p{
+    font-size: 0.7rem;
+  }
 }
 
