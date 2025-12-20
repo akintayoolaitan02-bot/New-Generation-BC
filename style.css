@@ -2470,9 +2470,12 @@ nav.scrolled {
 }
 
 @media (max-width: 600px) {
+  .contact-section{
+    padding: 40px 5%;
+  }
   .contact-grid {
     grid-template-columns: 1fr;
-    padding: 20px 70px;
+    padding: 40px 10%;
     gap: 3rem;
   }
 
@@ -2721,12 +2724,26 @@ nav.scrolled {
 
 /* Mobile */
 @media (max-width: 768px) {
+  .contact-form-section{
+    padding: 40px 5%;
+  }
   .contact-form-container {
     flex-direction: column;
     text-align: center;
   }
 
-  .contact-form {
-    padding: 50px;
+  .form-text h2 {
+    font-size: 1.1rem;
   }
+
+  .form-text p {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    width: 100%;
+  }
+
+  .contact-form {
+    padding: 40px 10%;
+  }
+
 }
